@@ -1,0 +1,447 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="UTF-8">
+	    <title>FreshKickz | Index</title>
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/status.js"></script>
+	    <script src="js/cart.js"></script>
+	  </head>
+	  <body>
+	    <div class="background"></div>
+	    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);">
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item">
+	            <a class="navbar-brand" href="index.html">
+	              <img src="images/logo.png" alt="Logo" class="logo">
+	            </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="index.html">
+	              <i class="fas fa-bag-shopping"></i> Home </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="cart.html">
+	              <i class="fas fa-shopping-cart"></i> Cart </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="about.html">
+	              <i class="fas fa-address-card"></i> About </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="contact.html">
+	              <i class="fas fa-address-book"></i> Contact Us </a>
+	          </li>
+	        </ul>
+	        <ul class="navbar-nav ml-auto" id="userNav">
+	          <li class="nav-item">
+	            <a class="nav-link" href="sign-up.html">
+	              <i class="fas fa-key"></i> Create Account </a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link" href="login.html">
+	              <i class="fas fa-user"></i> Sign-in </a>
+	          </li>
+	        </ul>
+	        <ul class="navbar-nav ml-auto" id="loggedInUserNav" style="display: none;">
+	          <li class="nav-item">
+	            <span class="btn btn-primary rounded-pill">
+	              <i class="fas fa-user"></i> 👋 <span id="loggedInUserEmail"></span>
+	            </span>
+	            <span class="nav-item btn btn-primary rounded-pill" onclick="logout()">
+	              <i class="fas fa-sign-out-alt"></i> Logout </span>
+	          </li>
+	        </ul>
+	      </div>
+	    </nav>
+	    <div class="test">
+	      <div class="marquee-container">
+	        <p class="marquee-content">Your marquee content here</p>
+	      </div>
+	    </div>
+	    <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <h5 class="modal-title" id="viewModalLabel">View Image</h5>
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="modal-body text-center">
+	            <img src="images/image1.jpg" alt="Image" class="img-fluid">
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="modal fade" id="viewModal2" tabindex="-1" role="dialog" aria-labelledby="viewModal2Label" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <h5 class="modal-title" id="viewModal2Label">View Image</h5>
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="modal-body text-center">
+	            <img src="images/image2.jpg" alt="Image" class="img-fluid">
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="modal fade" id="viewModal3" tabindex="-1" role="dialog" aria-labelledby="viewModal3Label" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <h5 class="modal-title" id="viewModal3Label">View Image</h5>
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="modal-body text-center">
+	            <img src="images/image3.jpg" alt="Image" class="img-fluid">
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- Modal 4 -->
+	    <div class="modal fade" id="viewModal4" tabindex="-1" role="dialog" aria-labelledby="viewModal4Label" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <h5 class="modal-title" id="viewModal4Label">View Image</h5>
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="modal-body text-center">
+	            <img src="images/image4.jpeg" alt="Image" class="img-fluid">
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="modal fade" id="viewModal5" tabindex="-1" role="dialog" aria-labelledby="viewModal5Label" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <h5 class="modal-title" id="viewModal5Label">View Image</h5>
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="modal-body text-center">
+	            <img src="images/image5.jpeg" alt="Image" class="img-fluid">
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="modal fade" id="viewModal6" tabindex="-1" role="dialog" aria-labelledby="viewModal6Label" aria-hidden="true">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <h5 class="modal-title" id="viewModal6Label">View Image</h5>
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	              <span aria-hidden="true"></span>
+	            </button>
+	          </div>
+	          <div class="modal-body text-center">
+	            <img src="images/image6.jpg" alt="Image" class="img-fluid">
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container">
+	      <div class="gallery">
+	        <div class="carousel-container">
+	          <div id="Slides-No-1" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	              <li data-target="#Slides-No-1" data-slide-to="0" class="active"></li>
+	            </ol>
+	            <div class="carousel-inner">
+	              <div class="carousel-item active">
+	                <div class="price-label">&nbsp;$249.99</div>
+	                <img src="images/image1.jpg" alt="Image 1">
+	              </div>
+	              <a class="carousel-control-prev" href="#Slides-No-1" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	              </a>
+	              <a class="carousel-control-next" href="#Slides-No-1" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	        <hr>
+	        <p class="text-center">Air Jordan 4's (Thunder) • 2023</p>
+	        <p class="text-center small">Men's • Black / Gold</p>
+	        <hr>
+	        <div class="desc">
+	          <button class="bn632-hover bn26" onclick="addToCart(1, '249.99')">
+	            <i class="fas fa-cart-plus"></i> Add to Cart </button>
+	          <button class="bn632-hover bn26" data-toggle="modal" data-target="#viewModal">
+	            <i class="fas fa-eye"></i> View </button>
+	          <hr>
+	          <span class="stars-rating" style="width: 94%;" aria-hidden="true">
+	            <span class="stars"></span> ( <span class="rating-number"></span>) </span>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container">
+	      <div class="gallery">
+	        <div class="carousel-container">
+	          <div id="Slides-No-2" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	              <li data-target="#Slides-No-2" data-slide-to="0" class="active"></li>
+	            </ol>
+	            <div class="carousel-inner">
+	              <div class="carousel-item active">
+	                <div class="price-label">&nbsp;$349.99</div>
+	                <img src="images/image2.jpg" alt="Image 2">
+	              </div>
+	              <a class="carousel-control-prev" href="#Slides-No-2" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	              </a>
+	              <a class="carousel-control-next" href="#Slides-No-2" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	        <hr>
+	        <p class="text-center">Air Jordan 8's (Playoffs) • 2023</p>
+	        <p class="text-center small">Men's • Black</p>
+	        <hr>
+	        <div class="desc">
+	          <button class="bn632-hover bn26" onclick="addToCart(2, '349.99')">
+	            <i class="fas fa-cart-plus"></i> Add to Cart </button>
+	          <button class="bn632-hover bn26" data-toggle="modal" data-target="#viewModal2">
+	            <i class="fas fa-eye"></i> View </button>
+	          <hr>
+	          <span class="stars-rating" style="width: 94%;" aria-hidden="true">
+	            <span class="stars"></span> ( <span class="rating-number"></span>) </span>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="container">
+	      <div class="gallery">
+	        <div class="carousel-container">
+	          <div id="Slides-No-3" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	              <li data-target="#Slides-No-3" data-slide-to="0" class="active"></li>
+	            </ol>
+	            <div class="carousel-inner">
+	              <div class="carousel-item active">
+	                <div class="price-label">&nbsp;$499.99</div>
+	                <img src="images/image3.jpg" alt="Image 3">
+	              </div>
+	              <a class="carousel-control-prev" href="#Slides-No-3" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	              </a>
+	              <a class="carousel-control-next" href="#Slides-No-3" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	        <hr>
+	        <p class="text-center">Air Jordan 13's (Wolf Grey) • 2023</p>
+	        <p class="text-center small">Men's • White / Grey</p>
+	        <hr>
+	        <div class="desc">
+	          <button class="bn632-hover bn26" onclick="addToCart(3, '499.99')">Add to Cart</button>
+	          <button class="bn632-hover bn26" data-toggle="modal" data-target="#viewModal3">
+	            <i class="fas fa-eye"></i> View </button>
+	          <hr>
+	          <span class="stars-rating" style="width: 94%;" aria-hidden="true">
+	            <span class="stars"></span> ( <span class="rating-number"></span>) </span>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- Gallery #4 -->
+	    <div class="container">
+	      <div class="gallery">
+	        <div class="carousel-container">
+	          <div id="Slides-No-4" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	              <li data-target="#Slides-No-4" data-slide-to="0" class="active"></li>
+	            </ol>
+	            <div class="carousel-inner">
+	              <div class="carousel-item active">
+	                <div class="price-label">&nbsp;$169.99</div>
+	                <img src="images/image4.jpeg" alt="Image 4">
+	              </div>
+	              <a class="carousel-control-prev" href="#Slides-No-4" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	              </a>
+	              <a class="carousel-control-next" href="#Slides-No-4" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	        <hr>
+	        <p class="text-center">Undefeated x Nike Air Force 1 • 2023</p>
+	        <p class="text-center small">Unisex • Multi-Color</p>
+	        <hr>
+	        <div class="desc">
+	          <button class="bn632-hover bn26" onclick="addToCart(4, '169.99')">
+	            <i class="fas fa-cart-plus"></i> Add to Cart </button>
+	          <button class="bn632-hover bn26" data-toggle="modal" data-target="#viewModal4">
+	            <i class="fas fa-eye"></i> View </button>
+	          <hr>
+	          <span class="stars-rating" style="width: 94%;" aria-hidden="true">
+	            <span class="stars"></span> ( <span class="rating-number"></span>) </span>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- Gallery #5 -->
+	    <div class="container">
+	      <div class="gallery">
+	        <div class="carousel-container">
+	          <div id="Slides-No-5" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	              <li data-target="#Slides-No-5" data-slide-to="0" class="active"></li>
+	            </ol>
+	            <div class="carousel-inner">
+	              <div class="carousel-item active">
+	                <div class="price-label">&nbsp;$399.99</div>
+	                <img src="images/image5.jpeg" alt="Image 5">
+	              </div>
+	              <a class="carousel-control-prev" href="#Slides-No-5" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	              </a>
+	              <a class="carousel-control-next" href="#Slides-No-5" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	        <hr>
+	        <p class="text-center">Air Jordan 1 Mid Panda Elephant • 2023</p>
+	        <p class="text-center small">Men's • Black</p>
+	        <hr>
+	        <div class="desc">
+	          <button class="bn632-hover bn26" onclick="addToCart(5, '399.99')">
+	            <i class="fas fa-cart-plus"></i> Add to Cart </button>
+	          <button class="bn632-hover bn26" data-toggle="modal" data-target="#viewModal5">
+	            <i class="fas fa-eye"></i> View </button>
+	          <hr>
+	          <span class="stars-rating" style="width: 94%;" aria-hidden="true">
+	            <span class="stars"></span> ( <span class="rating-number"></span>) </span>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- Gallery #6 -->
+	    <div class="container">
+	      <div class="gallery">
+	        <div class="carousel-container">
+	          <div id="Slides-No-6" class="carousel slide" data-ride="carousel">
+	            <ol class="carousel-indicators">
+	              <li data-target="#Slides-No-6" data-slide-to="0" class="active"></li>
+	            </ol>
+	            <div class="carousel-inner">
+	              <div class="carousel-item active">
+	                <div class="price-label">&nbsp;$259.99</div>
+	                <img src="images/image6.jpg" alt="Image 6">
+	              </div>
+	              <a class="carousel-control-prev" href="#Slides-No-6" role="button" data-slide="prev">
+	                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Previous</span>
+	              </a>
+	              <a class="carousel-control-next" href="#Slides-No-6" role="button" data-slide="next">
+	                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                <span class="sr-only">Next</span>
+	              </a>
+	            </div>
+	          </div>
+	        </div>
+	        <hr>
+	        <p class="text-center">Air Jordan 1 High OG Royal Reimagined • 2023</p>
+	        <p class="text-center small">Men's • Royal Blue</p>
+	        <hr>
+	        <div class="desc">
+	          <button class="bn632-hover bn26" onclick="addToCart(6, '259.99')">
+	            <i class="fas fa-cart-plus"></i> Add to Cart </button>
+	          <button class="bn632-hover bn26" data-toggle="modal" data-target="#viewModal6">
+	            <i class="fas fa-eye"></i> View </button>
+	          <hr>
+	          <span class="stars-rating" style="width: 94%;" aria-hidden="true">
+	            <span class="stars"></span> ( <span class="rating-number"></span>) </span>
+	        </div>
+	      </div>
+	    </div>
+	    <script>
+	      function generateRating(ratingElement) {
+	        var rating = Math.floor(Math.random() * (300 - 50 + 1)) + 50; // Generate a random number between 50 and 300
+	        var starsElement = ratingElement.querySelector('.stars');
+	        var ratingNumberElement = ratingElement.querySelector('.rating-number');
+	        if (rating >= 230) {
+	          ratingNumberElement.textContent = rating;
+	          ratingNumberElement.classList.add('gold-color');
+	        } else if (rating < 230 && rating >= 90) {
+	          ratingNumberElement.textContent = rating;
+	          ratingNumberElement.classList.add('purple-color');
+	        } else {
+	          ratingNumberElement.textContent = rating;
+	          ratingNumberElement.classList.add('red-color');
+	        }
+	        starsElement.textContent = generateStars(rating);
+	      }
+
+	      function generateStars(rating) {
+	        var stars = '';
+	        var filledStars = Math.floor(rating / 50);
+	        var emptyStars = 5 - filledStars;
+	        for (var i = 0; i < filledStars; i++) {
+	          stars += '★';
+	        }
+	        for (var j = 0; j < emptyStars; j++) {
+	          stars += '☆';
+	        }
+	        return stars;
+	      }
+	      window.addEventListener('load', function() {
+	        var ratingElements = document.querySelectorAll('.stars-rating');
+	        ratingElements.forEach(function(ratingElement) {
+	          generateRating(ratingElement);
+	        });
+	      });
+	    </script>
+	  </body>
+	</html>

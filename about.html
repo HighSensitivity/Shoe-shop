@@ -1,0 +1,91 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="UTF-8">
+	    <title>About Page</title>
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+	    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="css/main.css">
+	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	    <script src="js/jquery-3.4.1.min.js"></script>
+	    <script src="js/popper.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	    <script src="js/status.js"></script>
+	  </head>
+	  <body>
+	    <div class="background"></div>
+	    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);">
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item">
+	            <a class="navbar-brand" href="index.html">
+	              <img src="images/logo.png" alt="Logo" class="logo">
+	            </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="index.html">
+	              <i class="fas fa-bag-shopping"></i> Home </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="cart.html">
+	              <i class="fas fa-shopping-cart"></i> Cart </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="about.html">
+	              <i class="fas fa-address-card"></i> About </a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="contact.html">
+	              <i class="fas fa-address-book"></i> Contact Us </a>
+	          </li>
+	        </ul>
+	        <ul class="navbar-nav ml-auto" id="userNav">
+	          <li class="nav-item">
+	            <a class="nav-link" href="sign-up.html">
+	              <i class="fas fa-key"></i> Create Account </a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link" href="login.html">
+	              <i class="fas fa-user"></i> Sign-in </a>
+	          </li>
+	        </ul>
+	        <ul class="navbar-nav ml-auto" id="loggedInUserNav" style="display: none;">
+	          <li class="nav-item">
+	            <span class="btn btn-primary rounded-pill">
+	              <i class="fas fa-user"></i> 👋 <span id="loggedInUserEmail"></span>
+	            </span>
+	            <span class="nav-item btn btn-primary rounded-pill" onclick="logout()">
+	              <i class="fas fa-sign-out-alt"></i> Logout </span>
+	          </li>
+	        </ul>
+	      </div>
+	    </nav>
+	    <div class="box"></div>
+	    <div class="container">
+	      <div class="card text-center">
+	        <div class="card-title h2"></div>
+	        <div class="card-body">
+	          <hr>
+	          <h5 class="card-title"> Welcome to FreshKickz! </h5>
+	          <hr>
+	          <p class="card-text"> At FreshKickz, our passion is to provide you with top-quality, fresh, and stylish sneakers and shoes. We started with a vision to offer the best selection of footwear at competitive prices. With our curated range from top brands and our dedication to staying up-to-date with trends, we bring you the newest releases and limited editions. Our commitment to quality means that every pair of shoes is carefully inspected and meets our high standards. We believe in exceptional customer service and strive to create a seamless shopping experience. Join our community of sneaker enthusiasts to stay connected with the latest releases, exclusive offers, and exciting events. Find your perfect pair of fresh kicks at FreshKickz and elevate your style! We've been serving our customers since 2023. </p>
+	        </div>
+	      </div>
+	    </div>
+	    <footer class="footer text-center">
+	      <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#" role="button">
+	        <i class="fab fa-facebook-f"></i>
+	      </a>
+	      <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#" role="button">
+	        <i class="fab fa-twitter"></i>
+	      </a>
+	      <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#" role="button">
+	        <i class="fab fa-instagram"></i>
+	      </a>
+	      <p>FreshKickz &copy; 2023 </p>
+	    </footer>
+	  </body>
+	</html>
