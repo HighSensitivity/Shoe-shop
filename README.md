@@ -7,6 +7,7 @@ choice. We came up with the idea by thinking of our favourite things and said �
 webapps”. This is a great choice because people of our generation love sneakers especially 
 Jordan’s so we know that web app will be great to ensure good sales which will lead to best 
 incomes as college students.
+
 Our website uses a navigation bar and an alternative background styling element is organized by 
 the index.html file. The <div class=”background”></div> indicate a placeholder for future 
 background styling or content. Using Bootstrap classes (navbar, navbar-expand-lg, navbar-light, 
@@ -16,7 +17,8 @@ elements (<ul>, <li>) and links (<a>) styled as the company logo, Home, Cart, an
 sections, as well as a collapsible button (navbar-toggler) for smaller screens. These links use 
 Font Awesome symbols to graphically represent each component of the website and point 
 readers to “about.html “ and “cart.html” among other relevant pages.
+
 The login file for our website compromises of functions which are in JavaScript, we have a call 
 create account() and this function is responsible for the names, addresses, email, phone and 
 passwords our users. This helps us to get users trust when shopping for the best sneakers so they 
-can have a secure account when visiting the website again
+can have a secure account when visiting the website again.
