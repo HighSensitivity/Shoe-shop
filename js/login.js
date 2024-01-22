@@ -27,7 +27,9 @@ function createAccount() {
     localStorage.setItem('address', address);
     alert("Account Created");
 
-    window.location.href = "path/to/login.html";
+    setTimeout(function() {
+      window.location.href = "path/to/login.html";
+    }, 1000);
   }
 
   return valid;
