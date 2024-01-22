@@ -1,4 +1,3 @@
-
 function createAccount() {
   var name = document.getElementsByName("name")[0].value;
   var address = document.getElementsByName("address")[0].value;
@@ -27,12 +26,12 @@ function createAccount() {
     localStorage.setItem('phone', phone);
     localStorage.setItem('address', address);
     alert("Account Created");
-    window.location.href = "login.html";
+
+    window.location.href = "path/to/login.html";
   }
 
   return valid;
 }
-
 
 function login() {
     var username = document.getElementsByName("uname")[0].value;
