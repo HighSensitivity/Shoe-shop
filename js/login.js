@@ -28,7 +28,7 @@ function createAccount() {
     alert("Account Created");
     setTimeout(function() {
       window.location.href = "login.html";
-    }, 1000);
+    }
   }
 
   return valid;
