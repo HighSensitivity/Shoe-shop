@@ -26,15 +26,10 @@ function createAccount() {
     localStorage.setItem('phone', phone);
     localStorage.setItem('address', address);
     alert("Account Created");
+    setTimeout(function() {
+      window.location.href = "login.html";
+    }, 1000);
   }
-
-setTimeout(function() {
-  window.location.href = "path/to/login.html";
-}, 1000);
-
-
-   setTimmeout();
-   
 
   return valid;
 }
