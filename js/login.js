@@ -1,37 +1,45 @@
-function createAccount() {
-  var name = document.getElementsByName("name")[0].value;
-  var address = document.getElementsByName("address")[0].value;
-  var email = document.getElementsByName("email")[0].value;
-  var phone = document.getElementsByName("phone")[0].value;
-  var password = document.getElementsByName("password")[0].value;
-  var confirmPassword = document.getElementsByName("confirmPassword")[0].value;
-  var valid = true;
+ function createAccount() {
+        // Get input values
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
 
-  if (localStorage.getItem(email) !== null) {
-    alert("Email is already taken. Please enter a different one");
-    document.getElementsByName("email")[0].value = "";
-    document.getElementsByName("password")[0].value = "";
-    document.getElementsByName("confirmPassword")[0].value = "";
-    document.getElementsByName("email")[0].focus();
-    valid = false;
-  } else if (password !== confirmPassword) {
-    alert("Passwords do not match. Please enter matching passwords");
-    document.getElementsByName("password")[0].value = "";
-    document.getElementsByName("confirmPassword")[0].value = "";
-    document.getElementsByName("password")[0].focus();
-    valid = false;
-  } else {
-    localStorage.setItem(email, password.toString());
-    localStorage.setItem('name', name);
-    localStorage.setItem('phone', phone);
-    localStorage.setItem('address', address);
-    alert("Account Created");
-    window.location.href = "path/to/login.html";
-  }
+        // Check if email is already taken
+        var existingEmail = localStorage.getItem(email);
+        if (existingEmail) {
+          alert("Email is already taken. Please enter a different email.");
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          document.getElementById("confirmPassword").value = "";
+          document.getElementById("email").focus();
+          return false;
+        }
 
-  return valid;
-}
+        // Check if passwords match
+        if (password !== confirmPassword) {
+          alert("Passwords do not match. Please enter matching passwords.");
+          document.getElementById("password").value = "";
+          document.getElementById("confirmPassword").value = "";
+          document.getElementById("password").focus();
+          return false;
+        }
 
+        // Store account details in localStorage
+        localStorage.setItem(email, password);
+        localStorage.setItem("name", name);
+        localStorage.setItem("address", address);
+        localStorage.setItem("phone", phone);
+
+        alert("Account created successfully!");
+
+        // Redirect to login.html
+        window.location.href = "login.html";
+
+        return false;
+      }
 
 function login() {
     var username = document.getElementsByName("uname")[0].value;
