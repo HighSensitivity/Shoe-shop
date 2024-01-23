@@ -12,7 +12,7 @@ Our website uses a navigation bar and an alternative background styling element 
 the index.html file. The <div class=”background”></div> indicate a placeholder for future 
 background styling or content. Using Bootstrap classes (navbar, navbar-expand-lg, navbar-light, 
 and bg-light) and a subdued box shadow effect, the <nav> section creates a responsive navigation bar. It has a collapsed container (navbar-collapse) that encloses a list of navigation 
-elements , <li>) and links (<a>) styled as the company logo, Home, Cart, and About 
+elements (<ul>, <li>) and links (<a>) styled as the company logo, Home, Cart, and About 
 sections, as well as a collapsible button (navbar-toggler) for smaller screens. These links use 
 Font Awesome symbols to graphically represent each component of the website and point 
 readers to “about.html “ and “cart.html” among other relevant pages.
